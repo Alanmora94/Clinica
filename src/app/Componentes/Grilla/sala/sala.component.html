@@ -1,20 +1,27 @@
+<ng-container style="width: 100%; margin: 0%; padding: 0;" *ngIf="this._atendidos.length > 0">
 
-<mat-card *ngIf="this._atendidos.length > 0">
 
   <h2> TURNOS SIENDO ATENDIDOS</h2>
 
 
-  <app-espera [Turnos]="this._atendidos"></app-espera>
-
-</mat-card>
+  <app-espera style="margin: 0%; width: 80%;align-content: center;" [Turnos]="this._atendidos"></app-espera>
 
 
+</ng-container>
 
-<mat-card *ngIf="this._proximos.length > 0">
 
-  <h2> Prodximos Turnos</h2>
+
+
+
+
+
+<ng-container *ngIf="this._proximos.length > 0">
+
+
+  <h2> PROXIMOS TURNOS</h2>
 
 
   <app-espera [Turnos]="this._proximos"></app-espera>
 
-</mat-card>
+
+</ng-container>

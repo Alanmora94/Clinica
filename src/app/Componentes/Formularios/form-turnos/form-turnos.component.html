@@ -1,5 +1,5 @@
 <form [formGroup]="formulario" (submit)="Registrar()">
-  <h2>{{this._titulo}}</h2>
+  <h2 *ngIf="this._titulo != null">{{this._titulo}}</h2>
 
 
 
@@ -53,7 +53,7 @@
   <!-- <button type="button" (click)="validacion()" mat-raised-button color="primary">verValidacion</button>
 -->
 
-  <button type="button" (click)="carga()" mat-raised-button color="primary">Pre cargar Datos</button>
+  <button *ngIf="this.cookies.GetSesionActual().tipo == 'Paciente' " type="button" (click)="carga()" mat-raised-button color="primary">Pre cargar Datos</button>
 
 
   <ng-container >

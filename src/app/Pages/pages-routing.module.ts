@@ -33,27 +33,36 @@ const routes: Routes = [
     {path: "",
     component: LogInComponent},
 
-    {path: "Pacientes",
-     component: PacientesComponent},
      {path: "Home",
      component: HomeComponent,
      canActivate: [AutenticadorGuard]},
+
      {path: "LogUp",
      component: LogUpComponent},
+
      {path: "LogIn",
      component: LogInComponent},
+
      {path: "MisTurnos",
-     component: TurnosPacienteComponent},
+     component: TurnosPacienteComponent,
+     canActivate: [AutenticadorGuard]},
+
      {path: "EspecialistaTurnos",
-     component: TurnoEspecialistaComponent},
+     component: TurnoEspecialistaComponent,
+     canActivate: [AutenticadorGuard]},
+
      {path: "Sala",
-     component: SalaEsperaComponent},
+     component: SalaEsperaComponent,
+     canActivate: [AutenticadorGuard]},
+
      {path: "Turno",
      component: TurnosComponent,
      canActivate: [AutenticadorGuard]},
+
      {path: "TurnoCon",
      component: TurnoConsultaComponent,
      canActivate: [AutenticadorGuard]},
+
      {path: "AltaPaciente",
      component: AltaComponent}
     ]

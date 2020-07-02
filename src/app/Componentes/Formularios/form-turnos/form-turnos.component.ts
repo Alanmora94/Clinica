@@ -70,7 +70,7 @@ export class FormTurnosComponent implements OnInit {
   _apellido:string;
   _dni:number;
 
-  constructor(private sesion: SesionService, private frmbuilder: FormBuilder, private BD: FireStoreService, private cookies: CookiesService,
+  constructor(private sesion: SesionService, private frmbuilder: FormBuilder, private BD: FireStoreService, public cookies: CookiesService,
                private ruta: Router) {
 
     this.formulario = this.frmbuilder.group( {
