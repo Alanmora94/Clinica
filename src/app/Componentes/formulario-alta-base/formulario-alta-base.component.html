@@ -1,0 +1,79 @@
+<form class="example-form" (submit)="verificar()">
+
+  <table class="example-full-width" cellspacing="0"><tr>
+
+
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput  [formControl]="nombre" [errorStateMatcher]="matcher" >
+
+      <mat-hint>Errors appear instantly!</mat-hint>
+
+      <mat-error *ngIf="nombre.hasError('required')">
+        El Apellido es <strong>Requerido</strong>
+      </mat-error>
+
+      <mat-error *ngIf="nombre.hasError('minLength')">
+        El Apellido debe tener <strong>3 letras minimo</strong>
+      </mat-error>
+
+
+    </mat-form-field></td>
+
+
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Apellido</mat-label>
+      <input matInput  [formControl]="apellido" [errorStateMatcher]="matcher" >
+
+      <mat-hint>Errors appear instantly!</mat-hint>
+
+      <mat-error *ngIf="apellido.hasError('required')">
+        El Apellido es <strong>Requerido</strong>
+      </mat-error>
+
+      <mat-error *ngIf="apellido.hasError('minLength')">
+        El Apellido debe tener <strong>3 letras minimo</strong>
+      </mat-error>
+
+
+    </mat-form-field></td>
+
+
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput  [formControl]="email" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+      <mat-hint>Errors appear instantly!</mat-hint>
+      <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+        Por favor ingrese un Email valido
+      </mat-error>
+      <mat-error *ngIf="email.hasError('required')">
+        El Email es <strong>Requerido</strong>
+      </mat-error>
+    </mat-form-field></td>
+
+    <td>
+      <div class="container-input-file">
+        <label class="custom-file">
+
+          <input type="file" [formControl]="imagen" (change)="handleImage($event)"/>
+          <mat-icon>cloud_upload</mat-icon><span>Elegir Imagen</span>
+
+        </label>
+
+      </div>
+    </td>
+
+
+  </tr></table>
+
+
+
+
+<br>
+
+<button type="submit" mat-raised-button color="warn">Agregar</button>
+
+</form>
+
+
+

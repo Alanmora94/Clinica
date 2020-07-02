@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "Clinica",
+      "public": "dist/Clinica",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

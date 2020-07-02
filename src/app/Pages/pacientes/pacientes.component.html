@@ -1,0 +1,29 @@
+
+<div class="contenido">
+
+
+<app-formulario-alta-base (EnviarDatos)="recibirDatos($event)"></app-formulario-alta-base>
+
+
+
+</div>
+
+
+
+<div *ngIf="this._pacientes.length > 0; else noproducts">
+
+  <app-smart-table-paciente (deleteOne)="EliminarPaciente($event)" (PacienteEditado)="PacienteEditado($event)" [Paciente]="_pacientes"></app-smart-table-paciente>
+
+</div>
+
+
+<ng-template #noproducts>
+  <p>
+    No hay Pacientes cargados aun.
+  </p>
+</ng-template>
+
+
+
+
+

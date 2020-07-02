@@ -1,0 +1,98 @@
+
+      <ng-container *ngIf="this._DATASOURCE != null; else elseTemplate">
+
+
+
+        <div>
+
+          <table mat-table [dataSource]="this._DATASOURCE" matTableExporter #exporter="matTableExporter" class="mat-elevation-z8">
+
+            <ng-container matColumnDef="fecha">
+              <th mat-header-cell *matHeaderCellDef> <h3>Fecha</h3>  </th>
+              <td mat-cell *matCellDef="let element"> {{element.fecha | date }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Paciente_DNI">
+              <th mat-header-cell *matHeaderCellDef> <h3>DNI</h3>  </th>
+              <td mat-cell *matCellDef="let element"> {{element.Paciente_DNI}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="EspecialistaLegajo">
+              <th mat-header-cell *matHeaderCellDef> <h3>Especialista Legajo</h3>  </th>
+              <td mat-cell *matCellDef="let element"> {{element.EspecialistaLegajo}} </td>
+            </ng-container>
+
+
+
+
+          <ng-container matColumnDef="cod_sala">
+            <th mat-header-cell *matHeaderCellDef> <h3>sala (codigo)</h3>  </th>
+            <td mat-cell *matCellDef="let element"> {{element.cod_sala}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="estado">
+            <th mat-header-cell *matHeaderCellDef> <h3>Estado</h3> </th>
+            <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Accion">
+            <th mat-header-cell *matHeaderCellDef> <h3>Accion</h3> </th>
+            <td mat-cell *matCellDef="let element">
+
+              <div class="example-button-row">
+
+                <button mat-stroked-button *ngIf="element.estado == 'pendiente'" color="accent" (click)="Cancelar(element.id)">Cancelar</button>
+                <button mat-stroked-button *ngIf="element.estado == 'realizado' && this._tipoPaciente && this._tieneComentario" color="warn" (click)="encuesta(element)">Realizar encuesta</button>
+                <button mat-stroked-button *ngIf="element.estado == 'realizado' && this._tipoPaciente" color="warn" (click)="VerResena(element)">Visualizar Reseña</button>
+              </div>
+
+
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+          <mat-paginator [length]="10"
+                      [pageSize]="10"
+                      [pageSizeOptions]="[5, 10, 5, 10]">
+        </mat-paginator>
+
+
+        </table>
+
+
+
+
+
+        </div>
+
+
+        <hr>
+
+        <app-encuesta *ngIf="this._turnoActual != null" [Turno]="this._turnoActual"></app-encuesta>
+
+
+
+
+        <mat-card *ngIf="this._resenaBol">
+
+
+          <app-ver-resena [resena]="this._resena" ></app-ver-resena>
+
+        </mat-card>
+
+
+
+
+
+      </ng-container>
+       <ng-template #elseTemplate>
+         <h4>No tienes Turnos Pendientes...!!!</h4>
+       </ng-template>
+
+
+
+
+

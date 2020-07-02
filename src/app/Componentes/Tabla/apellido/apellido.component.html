@@ -1,0 +1,16 @@
+
+<mat-form-field class="example-full-width">
+  <mat-label>Apellido</mat-label>
+  <input matInput [formControl]="apellido" [errorStateMatcher]="matcher" (change)="escribiendo()">
+
+
+  <mat-error *ngIf="apellido.hasError('required')">
+    El Apellido es <strong>Requerido</strong>
+  </mat-error>
+
+  <mat-error *ngIf="apellido.hasError('minLength')">
+    El Apellido debe tener <strong>3 letras minimo</strong>
+  </mat-error>
+
+
+</mat-form-field>

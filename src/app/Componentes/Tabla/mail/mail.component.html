@@ -1,0 +1,11 @@
+<mat-form-field class="example-full-width">
+  <mat-label>Email</mat-label>
+  <input matInput  [formControl]="email" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com" (change)="escribiendo()">
+
+  <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+    Por favor ingrese un Email valido
+  </mat-error>
+  <mat-error *ngIf="email.hasError('required')">
+    El Email es <strong>Requerido</strong>
+  </mat-error>
+</mat-form-field>

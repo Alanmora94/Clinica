@@ -1,0 +1,18 @@
+
+<mat-card *ngIf="this._listo">
+
+<app-turnos-paciente   *ngIf="this._DatoSesion.tipo == 'Paciente'"></app-turnos-paciente>
+
+<app-turno-especialista *ngIf="this._DatoSesion.tipo == 'Especialista'"> </app-turno-especialista>
+
+
+
+<app-alta *ngIf="this._DatoSesion.tipo == 'admin'"></app-alta>
+
+
+
+<app-sala-espera *ngIf="this._DatoSesion.tipo == 'Recepcionista'"></app-sala-espera>
+
+</mat-card>
+
+

@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+<mat-card *ngIf="this._turnosHoy != null && this._salas != null">
+  <mat-card-content>
+
+    <app-sala  [Turnos]="this._turnosHoy" [Salas]="this._salas" ></app-sala>
+
+  </mat-card-content>
+</mat-card>

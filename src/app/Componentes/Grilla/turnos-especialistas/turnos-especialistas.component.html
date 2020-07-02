@@ -1,0 +1,16 @@
+<ng2-smart-table
+[settings]="settings"
+[source]="_filtrados"
+
+
+></ng2-smart-table>
+
+
+<mat-card *ngIf="this.cookies.GetTurnoId() != null">
+
+  <app-resena  [id]="this.cookies.GetTurnoId()" ></app-resena>
+
+</mat-card>
+
+
+

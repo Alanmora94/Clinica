@@ -1,0 +1,16 @@
+
+<mat-form-field class="example-full-width">
+  <mat-label>Nombre</mat-label>
+  <input matInput [formControl]="nombre" [errorStateMatcher]="matcher" (change)="escribiendo()">
+
+
+  <mat-error *ngIf="nombre.hasError('required')">
+    El Nombre es <strong>Requerido</strong>
+  </mat-error>
+
+  <mat-error *ngIf="nombre.hasError('minLength')">
+    El Nombre debe tener <strong>3 letras minimo</strong>
+  </mat-error>
+
+
+</mat-form-field>

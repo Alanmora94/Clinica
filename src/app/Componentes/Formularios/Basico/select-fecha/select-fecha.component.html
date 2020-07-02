@@ -1,0 +1,76 @@
+<mat-form-field class="example-full-width">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker" [min]="minDate" [max]="maxDate" (dateChange)="activarHora()" [(ngModel)]="this._dia">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+
+<hr>
+
+<ng-container *ngIf="this._horarioDisponible">
+
+
+         <mat-label>Horarios Disponibles</mat-label>
+        <select matNativeControl required  [(ngModel)]="this._FechaElegida" (change)="Cargar()">
+          <option *ngFor="let obj of this._disponibles; index as x" value = {{x}} > {{obj.fecha.getHours() + ":" + obj.fecha.getMinutes()}} </option>
+        </select>
+
+
+
+</ng-container>
+
+
+<!--
+
+        <mat-select [(ngModel)]="this._FechaElegida" (valueChange)="Cargar()" (selectedValueChange)="Cargar()">
+
+          <mat-option value={{obj}} *ngFor="let obj of this._disponibles" >{{obj.fecha.getHours().toString() + ":" + (obj.fecha | date:'mm').toString()}}</mat-option>
+
+        </mat-select>
+
+
+
+<mat-form-field *ngIf="this._horarios.length > 0">
+  <mat-label>Horarios Disponibles</mat-label>
+  <select matNativeControl required [(ngModel)]="this._FechaElegida" (change)="Cargar()">
+    <option [value]="obj" *ngFor="let obj of this._horarios" >{{obj.getHours().toString() + ":" + (obj | date:'mm').toString()}}</option>
+  </select>
+</mat-form-field>
+
+
+<button mat-stroked-button color="primary" (click)="Cargar()">Solicitar Turno</button>
+
+
+
+        <mat-label>Horarios Disponibles</mat-label>
+        <select matNativeControl required  [(value)]="this._FechaElegida" (change)="Cargar()">
+          <option value={{obj}} *ngFor="let obj of this._disponibles" >{{obj.fecha.getHours().toString() + ":" + (obj.fecha | date:'mm').toString()}}</option>
+        </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <ng-container *ngIf="this._disponibles.length > 0; else elseTemplate">
+
+        <mat-label>Horarios Disponibles</mat-label>
+
+        <mat-select [(value)]="this._FechaElegida"  required (valueChange)="Cargar()">
+          <mat-option *ngFor="let auxi of this._disponibles" [(value)]="auxi.fecha" > {{auxi.fecha.getHours().toString() + ":" + (auxi.fecha | date:'mm').toString()}} </mat-option>
+
+        </mat-select>
+-->

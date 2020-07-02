@@ -1,0 +1,9 @@
+
+<mat-card>
+  <mat-card-content >
+
+<app-turnos-especialistasListado *ngIf="this.cookies.GetSesionActual().dniLegajo != null" [Legajo]="this._DatoSesion" ></app-turnos-especialistasListado>
+
+
+  </mat-card-content>
+</mat-card>

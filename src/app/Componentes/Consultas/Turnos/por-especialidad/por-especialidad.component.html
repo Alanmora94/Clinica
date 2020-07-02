@@ -1,0 +1,24 @@
+
+  <mat-form-field>
+    <mat-label>filtrar por especialidad</mat-label>
+    <mat-select [(value)]="this._tipo" (valueChange)="filtrar()">
+      <mat-option value="especialidad1">especialidad1</mat-option>
+      <mat-option value="especialidad2">especialidad2</mat-option>
+      <mat-option value="especialidad3">especialidad3</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Estado</mat-label>
+    <mat-select [(value)]="this._estado"  (valueChange)="filtrar()">
+      <mat-option value="realizado">realizado</mat-option>
+      <mat-option value="cancelado">cancelado</mat-option>
+      <mat-option value="pendientes">pendientes</mat-option>
+      <mat-option value="todos">todos</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+
+
+  <button type="button" mat-raised-button color="primary" (click)="enviar()">Aplicar Filtro</button>

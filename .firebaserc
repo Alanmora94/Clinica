@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "clinica-3f440": {
+      "hosting": {
+        "Clinica": [
+          "clinica-3f440"
+        ]
+      }
+    }
+  }
+}

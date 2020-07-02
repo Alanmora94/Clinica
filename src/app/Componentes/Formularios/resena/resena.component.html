@@ -1,0 +1,37 @@
+<form [formGroup]="formulario" *ngIf="this._mostrar">
+  <h2>Reseña</h2>
+
+  <mat-label>Por favor, indique lo que ha tratado en el paciente</mat-label>
+
+  <hr>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Deje un comentario </mat-label>
+      <textarea matInput placeholder="..." formControlName="comentario" required [(ngModel)]="_comentario" ></textarea>
+    </mat-form-field>
+
+
+
+  <hr>
+
+
+
+  <div class="example-button-row">
+
+    <ng-container *ngIf="formulario.valid; else elseTemplate">
+      <button type="button" (click)="comentar()" mat-raised-button color="warn">Comentar</button>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <button type="button" mat-raised-button  disabled>Comentar</button>
+      <button type="button" (click)="cancelar()" mat-raised-button color="warn">Cancelar</button>
+    </ng-template>
+
+
+
+
+  </div>
+
+
+
+</form>

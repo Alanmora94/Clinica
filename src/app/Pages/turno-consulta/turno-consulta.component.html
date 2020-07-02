@@ -1,0 +1,24 @@
+
+<mat-card>
+  <mat-card-content>
+
+
+
+<app-entre-fechas [Lista]="this._listado" (Fechas)="recibirFechas($event)"></app-entre-fechas>
+
+<hr>
+
+
+<app-por-especialidad [Lista]="this._listado" (Especialidad)="recibirPorEspecialista($event)"></app-por-especialidad>
+
+
+
+
+<app-export *ngIf="this._listaexport.length > 0" [Lista]="_listaexport" [Cabecera]="_cabeceras"></app-export>
+
+
+
+  </mat-card-content>
+
+
+</mat-card>

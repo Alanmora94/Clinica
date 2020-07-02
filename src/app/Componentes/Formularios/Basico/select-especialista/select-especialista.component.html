@@ -1,0 +1,30 @@
+
+
+<div *ngIf="this._listaEspecialistas.length > 0">
+
+  <label >Especialista</label>
+  <select class="form-control" [(ngModel)]="this._elegido" (change)="enviar()">
+
+    <option *ngFor="let obj of this._listaEspecialistas; index as x" value={{x}} >{{obj.nombre + " " + obj.apellido + " - " + obj.especialidad}}</option>
+  </select>
+
+</div>
+
+
+
+
+<!--
+
+
+<select matNativeControl required  [(ngModel)]="this._FechaElegida" (change)="Cargar()">
+  <option *ngFor="let obj of this._disponibles; index as x" value = {{x}} > {{obj.fecha.getHours() + ":" + obj.fecha.getMinutes()}} </option>
+</select>
+
+
+
+  <mat-select  (ngModelChange)="this._elegido" (valueChange)="enviar()">
+    <mat-option   *ngFor="let obj of this._listaEspecialistas" [value]="obj" (onSelectionChange)="enviar(obj)">{{obj.nombre + " " + obj.apellido + " - " + obj.especialidad}}</mat-option>
+  </mat-select>
+
+
+-->

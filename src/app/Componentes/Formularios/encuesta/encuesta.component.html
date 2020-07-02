@@ -1,0 +1,64 @@
+<form [formGroup]="formulario" *ngIf="this._mostrar">
+  <h2>Encuesta</h2>
+
+  <mat-label>Por favor, indique un puntaje para:</mat-label>
+
+  <hr>
+
+  <mat-label>La Clinica</mat-label>
+  <br>
+  <mat-slider
+  thumbLabel
+  [displayWith]="formatLabel"
+  tickInterval="1"
+  min="1"
+  max="10"
+  formControlName="clinica" required [(ngModel)]="_clinica"
+  ></mat-slider>
+
+<hr>
+
+  <mat-label>El Especialista</mat-label>
+  <mat-slider
+  thumbLabel
+  [displayWith]="formatLabel"
+  tickInterval="1"
+  min="1"
+  max="10"
+  formControlName="especialista" required [(ngModel)]="_especialista"
+  ></mat-slider>
+
+  <hr>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Deje un comentario (66 caracteres minimo)</mat-label>
+      <textarea matInput placeholder="..." formControlName="comentario" required [(ngModel)]="_comentario" ></textarea>
+    </mat-form-field>
+
+
+
+  <hr>
+
+
+
+
+
+  <div class="example-button-row">
+
+    <ng-container *ngIf="formulario.valid; else elseTemplate">
+      <button type="button" (click)="comentar()" mat-raised-button color="warn">Comentar</button>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <button type="button" mat-raised-button  disabled>Comentar</button>
+      <button type="button" (click)="cancelar()" mat-raised-button color="warn">Cancelar</button>
+    </ng-template>
+
+
+
+
+  </div>
+
+
+
+</form>

@@ -1,0 +1,72 @@
+<form [formGroup]="formulario" (submit)="Registrar()">
+  <h2>{{this._titulo}}</h2>
+
+
+
+  <mat-form-field class="full-width-input">
+    <input matInput type="text" placeholder="Nombre" formControlName="nombre" required [(ngModel)]="_nombre">
+    <mat-error>
+      Proporcione un Nombre
+    </mat-error>
+  </mat-form-field>
+
+
+
+
+  <mat-form-field class="full-width-input">
+    <input matInput type="text" placeholder="Apellido" formControlName="apellido" required [(ngModel)]="_apellido">
+    <mat-error>
+      Proporcione un Apellido
+    </mat-error>
+  </mat-form-field>
+
+
+
+
+    <mat-form-field class="full-width-input">
+      <input matInput type="text" placeholder="DNI/LEGAJO" formControlName="dni" required [(ngModel)]="_dni">
+      <mat-error>
+        Proporcione un dni
+      </mat-error>
+    </mat-form-field>
+
+
+
+    <app-select-especialista (Elegido)="recibir($event)"></app-select-especialista>
+
+    <hr>
+
+
+
+
+
+
+    <app-select-fecha *ngIf="this._especialista != null" [Especialista]="this._especialista.legajo" (Elegido)="recibirFecha($event)" ></app-select-fecha>
+
+
+
+
+
+
+  <hr>
+
+  <!-- <button type="button" (click)="validacion()" mat-raised-button color="primary">verValidacion</button>
+-->
+
+  <button type="button" (click)="carga()" mat-raised-button color="primary">Pre cargar Datos</button>
+
+
+  <ng-container >
+    <button type="submit" mat-raised-button color="primary">Pedir Turno</button>
+  </ng-container>
+
+
+
+</form>
+
+
+
+
+
+
+

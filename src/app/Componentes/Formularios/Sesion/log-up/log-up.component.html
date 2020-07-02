@@ -1,0 +1,101 @@
+<form [formGroup]="formulario" (submit)="Registrar()">
+  <h2>{{this._titulo}}</h2>
+
+
+
+  <mat-form-field class="full-width-input">
+    <input matInput type="text" placeholder="Nombre" formControlName="nombre" required [(ngModel)]="_nombre">
+    <mat-error>
+      Proporcione un Nombre
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="full-width-input">
+    <input matInput type="text" placeholder="Apellido" formControlName="apellido" required [(ngModel)]="_apellido">
+    <mat-error>
+      Proporcione un Apellido
+    </mat-error>
+  </mat-form-field>
+
+
+
+
+
+  <mat-form-field *ngIf="this._GUI == 'admin'">
+    <mat-label>Eliga el tipo de Alta</mat-label>
+    <mat-select [(value)]="_tipo" >
+      <mat-option value="Paciente">Paciente</mat-option>
+      <mat-option value="Especialista">Especialista</mat-option>
+      <mat-option value="Recepcionista">Recepcionista</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <mat-form-field *ngIf="this._tipo == 'Especialista'">
+    <mat-label>Eliga La especialidad</mat-label>
+    <mat-select [(value)]="this._especialidad" >
+      <mat-option value="especialidad1">especialidad1</mat-option>
+      <mat-option value="especialidad2">especialidad2</mat-option>
+      <mat-option value="especialidad3">especialidad3</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+    <mat-form-field class="full-width-input">
+      <input matInput type="text" placeholder="DNI/LEGAJO" formControlName="dni" required [(ngModel)]="_dni">
+      <mat-error>
+        Proporcione un dni o Legajo
+      </mat-error>
+    </mat-form-field>
+
+
+
+
+
+  <mat-form-field class="full-width-input">
+    <input matInput placeholder="Email" formControlName="email" required [(ngModel)]="_email">
+    <mat-error>
+      Proporcione un Email Valido
+    </mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field class="full-width-input">
+    <input matInput type="password" placeholder="Password" formControlName="pass" required [(ngModel)]="_pass">
+    <mat-error>
+      Proporcione una password Valida
+    </mat-error>
+  </mat-form-field>
+
+
+    <div class="container-input-file">
+      <label class="custom-file" style="border: 1px solid #4CAF50;">
+
+        <input type="file" formControlName="imagen" style="display: none;" (change)="handleImage($event)"/>
+
+
+          <mat-icon>cloud_upload</mat-icon><span>  Elegir Imagen</span>
+
+
+
+      </label>
+
+    </div>
+
+
+
+  <hr>
+
+  <!-- <button type="button" (click)="validacion()" mat-raised-button color="primary">verValidacion</button>
+  -->
+
+  <!-- <button type="button" (click)="carga()" mat-raised-button color="primary">Cargar</button>-->
+
+  <ng-container *ngIf="formulario.valid; else elseTemplate">
+    <button type="submit" mat-raised-button color="primary">Registrar</button>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <button type="submit" style="margin-left: 8px;" mat-raised-button color="primary" disabled>Registrar</button>
+  </ng-template>
+
+</form>

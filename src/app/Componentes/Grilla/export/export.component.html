@@ -1,0 +1,36 @@
+
+
+
+<div>
+
+  <button mat-raised-button (click)="exporter.exportTable('csv', {fileName: 'datos'})">CSV</button>
+  <button mat-raised-button (click)="exporter.exportTable('txt', {fileName: 'datos'})">TXT</button>
+</div>
+
+
+<div>
+
+  <table mat-table [dataSource]="this._listado" matTableExporter #exporter="matTableExporter" class="mat-elevation-z8">
+
+
+  <ng-container *ngFor="let obj of this.displayedColumns; index as i " matColumnDef={{obj}}>
+    <th mat-header-cell *matHeaderCellDef> {{obj}} </th>
+    <td mat-cell *matCellDef="let element"> {{element['i' + (i + 1).toString()]}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+
+
+
+<mat-paginator [length]="100"
+              [pageSize]="5"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
+
+</div>
+
+

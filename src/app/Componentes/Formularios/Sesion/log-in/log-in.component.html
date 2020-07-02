@@ -1,0 +1,42 @@
+<form [formGroup]="formulario">
+  <h2>Log in</h2>
+
+
+
+  <mat-form-field class="full-width-input">
+    <input matInput placeholder="Email" formControlName="email" required [(ngModel)]="_email">
+    <mat-error>
+      Proporcione un Email Valido
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="full-width-input">
+    <input matInput type="password" placeholder="Password" formControlName="pass" required [(ngModel)]="_pass">
+    <mat-error>
+      Proporcione una password Valida
+    </mat-error>
+  </mat-form-field>
+
+  <hr>
+
+
+
+
+
+  <div class="example-button-row">
+
+    <ng-container *ngIf="formulario.valid; else elseTemplate">
+      <button type="button" (click)="this.IniciarS()" mat-raised-button color="warn">Login</button>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <button type="button" mat-raised-button  disabled>Login</button>
+    </ng-template>
+
+   <!-- <button mat-stroked-button color="primary" (click)="CargarDatos()">Cargar Datos</button>
+-->
+
+  </div>
+
+
+
+</form>

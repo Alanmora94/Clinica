@@ -1,0 +1,20 @@
+
+<mat-card *ngIf="this._atendidos.length > 0">
+
+  <h2> TURNOS SIENDO ATENDIDOS</h2>
+
+
+  <app-espera [Turnos]="this._atendidos"></app-espera>
+
+</mat-card>
+
+
+
+<mat-card *ngIf="this._proximos.length > 0">
+
+  <h2> Prodximos Turnos</h2>
+
+
+  <app-espera [Turnos]="this._proximos"></app-espera>
+
+</mat-card>
