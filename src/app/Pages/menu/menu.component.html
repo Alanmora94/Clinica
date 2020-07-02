@@ -22,7 +22,7 @@
         <a *ngIf="this.cookies.GetSesionActual().tipo != 'Especialista' " mat-button color="primary"  routerLink="/Turno" >Solicitar Turno</a>
 
         <a *ngIf="this.cookies.GetSesionActual().tipo == 'Paciente' " mat-button color="primary"  routerLink="/MisTurnos" >Mis Turnos</a>
-        <a *ngIf="this.cookies.GetSesionActual().tipo == 'Recepcionista' " mat-button color="primary"  routerLink="/MisTurnos" >Mis Turnos</a>
+        <a *ngIf="this.cookies.GetSesionActual().tipo == 'Recepcionista' " mat-button color="primary"  routerLink="/MisTurnos" >Turnos</a>
 
 
          <a *ngIf="this.cookies.GetSesionActual().tipo == 'Recepcionista' " mat-button color="primary"  routerLink="/Sala" >Sala de Espera</a>
