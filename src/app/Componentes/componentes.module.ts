@@ -44,7 +44,7 @@ import { MailComponent } from './Tabla/mail/mail.component';
 import { CargarImgComponent } from './Tabla/cargar-img/cargar-img.component';
 import { ImgEditorComponent } from './Tabla/img-editor/img-editor.component';
 import { NameComponent } from './Tabla/name/name.component';
-//import { TextoComponent } from './tabla/texto/texto.component';
+
 
 
 //************** SPINER DE CARGA */
@@ -75,8 +75,6 @@ import { EsperaComponent } from './Grilla/espera/espera.component';
 import { IMGComponent } from './img/img.component';
 
 
-//import {AngularFireStorage} from '@angular/fire/storage';
-
 
 @NgModule({
   declarations: [FormularioAltaBaseComponent, SmartTablePacienteComponent,
@@ -84,7 +82,7 @@ import { IMGComponent } from './img/img.component';
       ImgEditorComponent, NameComponent, DatoCargadoComponent, EstadisticasComponent,
        LogInComponent, LogUpComponent, FormTurnosComponent, SelectEspecialistaComponent, SelectFechaComponent, EntreFechasComponent,ExportComponent, PorEspecialidadComponent, EncuestaComponent, MisTurnosComponent, SalaComponent, TurnosEspecialistasComponent, FechaComponent, CancelarFinalizarComponent, ResenaComponent, VerResenaComponent, EsperaComponent, IMGComponent],
   imports: [
-  //  AngularFireStorage,
+
   NgxSpinnerModule,
   MatIconModule,
     Ng2SmartTableModule,

@@ -21,7 +21,6 @@ export class TurnoEspecialistaComponent implements OnInit {
 
   constructor(public cookies: CookiesService) {
 
-    console.log("entra en especialista")
 
     this.CargarDatosSesion();
   }
@@ -37,9 +36,7 @@ export class TurnoEspecialistaComponent implements OnInit {
 
     this._DatoSesion = this.cookies.GetSesionActual();
 
-    console.log("--------------");
-    console.log(this._DatoSesion);
-    console.log("--------------");
+
   }
 
 

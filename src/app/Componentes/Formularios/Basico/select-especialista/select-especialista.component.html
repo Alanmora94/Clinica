@@ -12,19 +12,3 @@
 
 
 
-
-<!--
-
-
-<select matNativeControl required  [(ngModel)]="this._FechaElegida" (change)="Cargar()">
-  <option *ngFor="let obj of this._disponibles; index as x" value = {{x}} > {{obj.fecha.getHours() + ":" + obj.fecha.getMinutes()}} </option>
-</select>
-
-
-
-  <mat-select  (ngModelChange)="this._elegido" (valueChange)="enviar()">
-    <mat-option   *ngFor="let obj of this._listaEspecialistas" [value]="obj" (onSelectionChange)="enviar(obj)">{{obj.nombre + " " + obj.apellido + " - " + obj.especialidad}}</mat-option>
-  </mat-select>
-
-
--->

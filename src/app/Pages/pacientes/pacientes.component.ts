@@ -16,22 +16,16 @@ export class PacientesComponent implements OnInit {
 
   ngOnInit(): void {
 
-/*
-    console.log("*nnnnnnnnnnnn*")
-    this.store.GetPacientes().subscribe(pacientes => {
-      this._pacientes = pacientes;
-    });
-    console.log("*nnnnnnnnnnnn*")
-*/
+
   }
 
 
   recibirDatos(datos :Paciente){
 
 
-    console.log( datos.apellido + " "  + datos.nombre + " "  + datos.email);
 
-    //this.store.SubirImagen(datos.imagen);
+
+
 
     this.store.AltaPaciente(datos);
 

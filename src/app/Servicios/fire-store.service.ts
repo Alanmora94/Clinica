@@ -358,8 +358,6 @@ let tim : Date = new Date(Date.parse(vari));
 
 obj.fecha = tim;
 
-console.log(tim);
-console.log(obj.fecha);
 
 
 let auxTur : IturnoGr = {

@@ -45,13 +45,11 @@ public set Lista (obj : Array<Iturno>){
 
   filtrar(){
 
-    console.log(this._desde)
-    console.log(this._hasta)
-    console.log(this._listado)
+
 
     this._filtrado = this.turnos.EntreFechas(this._listado,this._desde, this._hasta);
 
-    //console.log(this._filtrado);
+
 
     this.emitur();
 

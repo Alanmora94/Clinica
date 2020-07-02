@@ -121,8 +121,7 @@ export class SelectFechaComponent implements OnInit {
     this._disponibles = this.turno.ObtenerHorarioDisponibleXSala(this._salas,this._TurnosTodos,this._horarios);
 
 
-    console.log("FECHAS CONSEGUIDAS")
-    console.log(this._disponibles)
+
 
     if (this._disponibles == null || this._disponibles.length < 1){
 
@@ -142,7 +141,7 @@ export class SelectFechaComponent implements OnInit {
 
   Cargar(){
 
-    console.log(this._disponibles[this._FechaElegida]);
+
     this.Elegido.emit(this._disponibles[this._FechaElegida]);
 
 
@@ -166,7 +165,7 @@ let aux : Array<Iturno>;
     this._fechaNoDisponible = this.turno.ObtenerFechaNoDisponiblesXEspecialista(this._TurnosTodos,this._especialista);
 
 
-    console.log(this._fechaNoDisponible);
+
 
 
   })

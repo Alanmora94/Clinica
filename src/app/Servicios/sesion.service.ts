@@ -168,13 +168,13 @@ IniciarSesion(obj: Usuario){
 
         }).catch(e=>{
           this.notificacion.ErrorLogin();
-                       console.log("error de login");
+
 
                  });
 
     } catch (error) {
       this.notificacion.ErrorLogin();
-      console.log("error de login2");
+
     }
 
 

@@ -50,8 +50,7 @@ export class ExportComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this._listado);
-    console.log(this.displayedColumns);
+
 
   }
 

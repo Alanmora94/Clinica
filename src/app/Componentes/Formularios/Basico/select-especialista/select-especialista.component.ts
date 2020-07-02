@@ -42,7 +42,7 @@ _elegido: number;
   enviar(){
 
 
-    //console.log(this._listaEspecialistas[this._elegido] );
+
 
     this.Elegido.emit(this._listaEspecialistas[this._elegido]);
 

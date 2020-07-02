@@ -9,14 +9,14 @@ import { Iespecialista } from '../../../Modelos/iespecialista';
 import { Irecepcionista } from '../../../Modelos/irecepcionista';
 import { Isesion } from '../../../Modelos/isesion';
 import { Iturno } from '../../../Modelos/iturno';
-//import { Usuario } from '../../../../Modelos/usuario';
+
 
 
 
 import {SesionService} from '../../../Servicios/sesion.service';
 
 import {CookiesService} from '../../../Servicios/cookies.service';
-//import {BdService} from '../../../../Servicios/bd.service';
+
 
 import {FireStoreService} from '../../../Servicios/fire-store.service';
 
@@ -115,7 +115,7 @@ export class FormTurnosComponent implements OnInit {
                         estado: "pendiente"
                       }
 
-                      console.log(_turno);
+
 
                       this.BD.AltaTurnos(_turno);
 
@@ -148,9 +148,7 @@ export class FormTurnosComponent implements OnInit {
 
     this._DatoSesion = this.cookies.GetSesionActual();
 
-    console.log("--------------");
-    console.log(this._DatoSesion);
-    console.log("--------------");
+
   }
 
 
@@ -169,7 +167,7 @@ export class FormTurnosComponent implements OnInit {
 
     }else{
 
-      console.log("LAAA");
+
 
       this.CargarDatosSesion();
     }
@@ -189,7 +187,7 @@ export class FormTurnosComponent implements OnInit {
 
   recibirFecha(e){
 
-console.log(e);
+
 
     this._fecha=e;
   }

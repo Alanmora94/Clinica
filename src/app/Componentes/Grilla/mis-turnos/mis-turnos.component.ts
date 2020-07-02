@@ -46,8 +46,6 @@ export class MisTurnosComponent implements OnInit {
   @Input()
   public set DNI (obj : Isesion){
 
-    console.log("entra en input");
-    console.log(obj);
 
     this._dni = Number(obj.dniLegajo);
     this._tipoUser = obj.tipo
@@ -95,8 +93,7 @@ export class MisTurnosComponent implements OnInit {
     let auxi : Array<Iturno> = [];
 
 
-      console.log(this._turnos);
-      console.log(this._dni);
+
 
     if (this.cookes.GetSesionActual().tipo == 'Paciente'){
 
@@ -116,7 +113,7 @@ export class MisTurnosComponent implements OnInit {
 
   Cancelar(e){
 
-    console.log(e);
+
 
     this.DB.UpdateTurno(e, "cancelado");
 

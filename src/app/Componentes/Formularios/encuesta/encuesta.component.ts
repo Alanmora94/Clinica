@@ -77,9 +77,6 @@ export class EncuestaComponent implements OnInit {
   comentar(){
 
 
-    console.log(this._clinica);
-    console.log(this._especialista);
-    console.log(this._comentario);
 
 
     if(this.formulario.valid){

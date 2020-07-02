@@ -709,7 +709,7 @@ GetProximosTurnos(salas: Array<Isala>, turnos: Array<Iturno>): Array<Iturno>{
   ordenados = _lista.sort((a, b)=>( a.fecha > b.fecha) ? 1 : -1 );
 
 
-console.log(ordenados);
+
 
 
  let _prelistos : Array<Iturno> = [];

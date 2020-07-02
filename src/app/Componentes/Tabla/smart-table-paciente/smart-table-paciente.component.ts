@@ -132,8 +132,7 @@ export class SmartTablePacienteComponent implements OnInit {
 
     if (event.newData.nombre.valido && event.newData.apellido.valido && event.newData.email.valido) {
 
-      console.log("data: ",event.data.nombre);
-      console.log("data: ",event.newData.nombre.valor);
+
 
 
       this._pacienteEditado = new Paciente();

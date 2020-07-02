@@ -36,7 +36,6 @@ export class HomeComponent implements OnInit {
   constructor(private DB : FireStoreService, private turno: TurnosService,public cookies: CookiesService) {
 
 
-    console.log("entra en home")
 
 
     this._DatoSesion = this.cookies.GetSesionActual();
@@ -84,9 +83,7 @@ export class HomeComponent implements OnInit {
 
               this._listo = true;
 
-              console.log("JOYAAAAA");
-              console.log(this._DatoSesion);
-              console.log(this._listo);
+
 
               break;
 
@@ -143,9 +140,7 @@ export class HomeComponent implements OnInit {
 
                   this._listo = true;
 
-                  console.log("JOYAAAAA");
-                  console.log(this._DatoSesion);
-                  console.log(this._listo);
+
 
                   break;
 
@@ -165,13 +160,13 @@ export class HomeComponent implements OnInit {
 
          //************************************ TRAER LOS DATOS DE RECEPCIONISTA  */
 
-         console.log(this._DatoSesion.tipo);
+
 
 
 
           if(this._DatoSesion.tipo == 'Recepcionista'){
 
-            console.log("entra en recepcion");
+
 
             let _recepcionista : Array<Irecepcionista>;
 
@@ -206,9 +201,7 @@ export class HomeComponent implements OnInit {
 
                     this._listo = true;
 
-                    console.log("JOYAAAAA");
-                    console.log(this._DatoSesion);
-                    console.log(this._listo);
+
 
                     break;
 

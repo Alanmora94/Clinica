@@ -39,9 +39,6 @@ export class MailComponent extends DefaultEditor implements OnInit {
 
 
 
-    console.log(this._viejoValor);
-
-
     this.email = new FormControl(this._viejoValor, [
       Validators.required,
       Validators.email,

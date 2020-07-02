@@ -42,9 +42,7 @@ export class TurnosPacienteComponent implements OnInit {
 
     this._DatoSesion = this.cookies.GetSesionActual();
 
-    console.log("-------ÑIAAA-------");
-    console.log(this._DatoSesion);
-    console.log("--------ÑIAAA------");
+
   }
 
 

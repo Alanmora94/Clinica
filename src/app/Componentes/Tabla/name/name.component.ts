@@ -30,7 +30,7 @@ export class NameComponent extends DefaultEditor implements OnInit {
   ngOnInit() {
 
 
-    if (typeof this.cell.getValue() === 'string') 
+    if (typeof this.cell.getValue() === 'string')
 
     {
       this._viejoValor = this.cell.getValue();
@@ -40,7 +40,7 @@ export class NameComponent extends DefaultEditor implements OnInit {
       this._viejoValor = "CARGANDO..."
     }
 
-    console.log(this._viejoValor);
+
 
 
     this.nombre = new FormControl(this._viejoValor, [
@@ -61,7 +61,7 @@ export class NameComponent extends DefaultEditor implements OnInit {
 
   escribiendo(){
 
-    //console.log("dato viejo " + this.cell.getValue() );
+
 
 
 this.generarItem();

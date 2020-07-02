@@ -197,13 +197,7 @@ export class LogUpComponent implements OnInit {
 
   validacion(){
 
-    console.log(this._tipo);
-    console.log(this.pass.valid + "  " + this.pass.value);
-    console.log(this.surname.valid + "  " + this.surname.value);
-    console.log(this.name.valid + "  " + this.name.value);
-    console.log(this.email.valid + "  " + this.email.value);
-    console.log(this.dni.valid + "  " + this.dni.value);
-    console.log(this.imagen.valid + "  " + this.imagen.value);
+
 
 
   }

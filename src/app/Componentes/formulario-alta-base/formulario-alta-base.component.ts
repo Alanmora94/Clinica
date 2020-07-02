@@ -70,32 +70,25 @@ preimagen;
 
   verificar(){
 
-    console.log(this.apellido.value);
-    console.log(this.nombre.value);
-    console.log(this.email.value);
+
 
 
     if(this.apellido.valid && this.nombre.valid && this.email.valid){
 
-      console.log("entro");
 
 
-    //let datos: DatoBase;
+
+
 
     this.datos = new Paciente(this.nombre.value,this.apellido.value,this.email.value, this.preimagen)
 
-    //this.datos.apellido = this.apellido.value;
-   // datos.nombre = this.nombre.value;
-    //datos.email = this.email.value;
 
-
-    //console.log("DATO:" + this.datos.apellido);
 
 
 
       this.EnviarDatos.emit(this.datos);
 
-    //this.servicio.SubirImagen(this.preimagen);
+
     }
 
   }

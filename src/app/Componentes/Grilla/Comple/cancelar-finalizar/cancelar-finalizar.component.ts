@@ -27,7 +27,7 @@ export class CancelarFinalizarComponent implements OnInit {
 
   finalizar(){
 
-      //console.log(this.value);
+
 
       this.cookies.GuardarTurnoID(this.value);
 

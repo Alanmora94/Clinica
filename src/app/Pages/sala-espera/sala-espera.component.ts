@@ -33,7 +33,7 @@ _turnosHoy: Array<Iturno>;
 
        this._turnosHoy = this.turno.GetTurnosHoy(date);
 
-       //console.log(this._turnosHoy);
+
 
     })
 

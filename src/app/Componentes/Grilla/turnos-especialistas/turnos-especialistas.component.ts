@@ -43,8 +43,6 @@ export class TurnosEspecialistasComponent implements OnInit {
     this._DatoSesion = obj.dniLegajo;
     this._tipoUser = obj.tipo;
 
-    console.log("Entro en turnos Especialistas");
-    console.log(this._DatoSesion);
 
   }
 
@@ -133,7 +131,7 @@ export class TurnosEspecialistasComponent implements OnInit {
 
       this._filtrados = this.turno.PorUnEspecialista(this._turnos, this._DatoSesion);
 
-      console.log(this._filtrados);
+
 
 
   }

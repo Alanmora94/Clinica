@@ -1,9 +1,12 @@
 
 
 
-<div>
+<div style="margin: 5px;">
 
-  <button mat-raised-button (click)="exporter.exportTable('csv', {fileName: 'datos'})">CSV</button>
+
+  <h3>Descargar en </h3>
+  <button style="margin-right: 5px;" mat-raised-button (click)="exporter.exportTable('csv', {fileName: 'datos'})">CSV</button>
+
   <button mat-raised-button (click)="exporter.exportTable('txt', {fileName: 'datos'})">TXT</button>
 </div>
 

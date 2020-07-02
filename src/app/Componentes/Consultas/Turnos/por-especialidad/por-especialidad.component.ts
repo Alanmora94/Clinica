@@ -81,9 +81,6 @@ public set Lista (obj : Array<Iturno>){
 
 
 
-    console.log(this._listado);
-    console.log(this._tipo);
-    console.log(this._estado);
 
 
   }
