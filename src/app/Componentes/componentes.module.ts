@@ -72,6 +72,7 @@ import { CancelarFinalizarComponent } from './Grilla/Comple/cancelar-finalizar/c
 import { ResenaComponent } from './Formularios/resena/resena.component';
 import { VerResenaComponent } from './Grilla/ver-resena/ver-resena.component';
 import { EsperaComponent } from './Grilla/espera/espera.component';
+import { IMGComponent } from './img/img.component';
 
 
 //import {AngularFireStorage} from '@angular/fire/storage';
@@ -81,7 +82,7 @@ import { EsperaComponent } from './Grilla/espera/espera.component';
   declarations: [FormularioAltaBaseComponent, SmartTablePacienteComponent,
      ImgComponent, ApellidoComponent, MailComponent, CargarImgComponent,
       ImgEditorComponent, NameComponent, DatoCargadoComponent, EstadisticasComponent,
-       LogInComponent, LogUpComponent, FormTurnosComponent, SelectEspecialistaComponent, SelectFechaComponent, EntreFechasComponent,ExportComponent, PorEspecialidadComponent, EncuestaComponent, MisTurnosComponent, SalaComponent, TurnosEspecialistasComponent, FechaComponent, CancelarFinalizarComponent, ResenaComponent, VerResenaComponent, EsperaComponent],
+       LogInComponent, LogUpComponent, FormTurnosComponent, SelectEspecialistaComponent, SelectFechaComponent, EntreFechasComponent,ExportComponent, PorEspecialidadComponent, EncuestaComponent, MisTurnosComponent, SalaComponent, TurnosEspecialistasComponent, FechaComponent, CancelarFinalizarComponent, ResenaComponent, VerResenaComponent, EsperaComponent, IMGComponent],
   imports: [
   //  AngularFireStorage,
   NgxSpinnerModule,
@@ -116,6 +117,6 @@ import { EsperaComponent } from './Grilla/espera/espera.component';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [FormularioAltaBaseComponent,SmartTablePacienteComponent,
     LogUpComponent,LogInComponent,FormTurnosComponent,EntreFechasComponent,ExportComponent,PorEspecialidadComponent,SalaComponent,
-    EncuestaComponent,MisTurnosComponent,TurnosEspecialistasComponent]
+    EncuestaComponent,MisTurnosComponent,TurnosEspecialistasComponent,IMGComponent]
 })
 export class ComponentesModule { }

@@ -9,7 +9,10 @@ import {FireStoreService} from './fire-store.service';
 
 import {TokenService} from './token.service';
 
+import {NotificacionService} from '../Servicios/notificacion.service';
+
 //***************MODELOS */
+
 
 import {Iturno} from '../Modelos/iturno';
 
@@ -33,7 +36,7 @@ export class CookiesService {
 
  public _sesionActual: Isesion;
 
-  constructor(private db: FireStoreService, private token : TokenService, private rutas: Router) {
+  constructor(private db: FireStoreService, private token : TokenService, private rutas: Router, private notificacion : NotificacionService) {
 
 
     this.regenerar();
@@ -149,6 +152,8 @@ GetTurno(): Iturno{
 
 BorrarCookies(){
 
+  this.notificacion.LogOut(this.GetSesionActual().nombre);
+
   localStorage.removeItem("Turno");
   localStorage.removeItem("Usuario");
   localStorage.removeItem("UserName");
@@ -156,6 +161,8 @@ BorrarCookies(){
   this.token.BorrarToken();
 
   this._sesionActual = null;
+
+
 
   this.rutas.navigateByUrl("LogIn");
 

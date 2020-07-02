@@ -12,8 +12,8 @@ import {Usuario} from '../Modelos/usuario';
 //********************SERVICIOS */
 
 import {CookiesService} from '../Servicios/cookies.service';
-import {TokenService} from './token.service'
-
+import {TokenService} from './token.service';
+import {NotificacionService} from './notificacion.service'
 
 
 
@@ -26,8 +26,8 @@ export class SesionService {
     private auth: AngularFireAuth,
     private token: TokenService,
     private ruta: Router,
-    private cookies: CookiesService
-
+    private cookies: CookiesService,
+    private notificacion: NotificacionService
 
   ) { }
 
@@ -158,6 +158,7 @@ IniciarSesion(obj: Usuario){
 
             this.cookies.GuardarUsuario(userAux);
 
+            this.notificacion.LogIn(userAux.nombre)
             this.ruta.navigateByUrl("Home");
 
           }
@@ -166,12 +167,13 @@ IniciarSesion(obj: Usuario){
                  });
 
         }).catch(e=>{
+          this.notificacion.ErrorLogin();
                        console.log("error de login");
 
                  });
 
     } catch (error) {
-
+      this.notificacion.ErrorLogin();
       console.log("error de login2");
     }
 

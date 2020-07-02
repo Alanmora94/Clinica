@@ -37,6 +37,7 @@ import { TurnoConsultaComponent } from './turno-consulta/turno-consulta.componen
 import { TurnosPacienteComponent } from './turnos-paciente/turnos-paciente.component';
 import { SalaEsperaComponent } from './sala-espera/sala-espera.component';
 import { TurnoEspecialistaComponent } from './turno-especialista/turno-especialista.component';
+import { Pagina404Component } from './pagina404/pagina404.component';
 
 
 
@@ -51,7 +52,8 @@ import { TurnoEspecialistaComponent } from './turno-especialista/turno-especiali
     TurnoConsultaComponent,
     TurnosPacienteComponent,
     SalaEsperaComponent,
-    TurnoEspecialistaComponent],
+    TurnoEspecialistaComponent,
+    Pagina404Component],
   imports: [
     CommonModule,
     ToastrModule,

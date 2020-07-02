@@ -12,6 +12,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 //**********FIREBASE */
 
+import { ToastrModule } from 'ngx-toastr';
 
 import { AngularFireModule } from '@angular/fire';
 
@@ -64,6 +65,7 @@ export function tokenGetter() {
     BotonPipe
   ],
   imports: [
+
     BrowserModule,
     HttpClientModule,
     AngularFireAnalyticsModule,
@@ -85,6 +87,7 @@ export function tokenGetter() {
 
 
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     PagesModule,
     ComponentesModule,
     AppRoutingModule,

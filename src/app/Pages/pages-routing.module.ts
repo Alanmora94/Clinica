@@ -15,6 +15,7 @@ import {AltaComponent} from '../Pages/admin/alta/alta.component'
 
 import {SalaEsperaComponent} from '../Pages/sala-espera/sala-espera.component'
 
+import {Pagina404Component} from '../Pages/pagina404/pagina404.component'
 
 import {TurnoEspecialistaComponent} from '../Pages/turno-especialista/turno-especialista.component'
 
@@ -64,9 +65,13 @@ const routes: Routes = [
      canActivate: [AutenticadorGuard]},
 
      {path: "AltaPaciente",
-     component: AltaComponent}
+     component: AltaComponent},
+
+     {path: "**", component: Pagina404Component}
+
     ]
-  }
+  },
+  {path: "**", component: Pagina404Component}
 
 ]
 

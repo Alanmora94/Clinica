@@ -23,7 +23,7 @@ import {FireStoreService} from '../../../Servicios/fire-store.service';
 import { FormControl, FormBuilder ,FormGroup, Validators } from '@angular/forms';
 
 
-//import {NotificacionService} from '../../../Servicios/notificacion.service';
+import {NotificacionService} from '../../../Servicios/notificacion.service';
 
 
 @Component({
@@ -70,7 +70,8 @@ export class FormTurnosComponent implements OnInit {
   _apellido:string;
   _dni:number;
 
-  constructor(private sesion: SesionService, private frmbuilder: FormBuilder, private BD: FireStoreService, public cookies: CookiesService,
+  constructor(private sesion: SesionService, private frmbuilder: FormBuilder, private BD: FireStoreService,
+    public cookies: CookiesService,private notificar :NotificacionService,
                private ruta: Router) {
 
     this.formulario = this.frmbuilder.group( {
@@ -118,7 +119,7 @@ export class FormTurnosComponent implements OnInit {
 
                       this.BD.AltaTurnos(_turno);
 
-                     // this.notificar.Turno(_turno.cod_sala);
+                      this.notificar.Turno(_turno.cod_sala);
                       this.ruta.navigateByUrl("Home");
 
 

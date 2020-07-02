@@ -4,3 +4,9 @@ mat-card {
   text-align: center;
   margin-top: 1%;
 }
+mat-card {
+  max-width: 80%;
+  margin: 2em auto;
+  text-align: center;
+  margin-top: 10%;
+}

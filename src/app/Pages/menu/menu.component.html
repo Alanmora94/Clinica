@@ -5,6 +5,11 @@
    <div class="spacer"></div>
 
 
+
+
+
+
+
     <a *ngIf="this.cookies.GetSesionActual() == null" mat-button color="primary" routerLink="/LogIn" >LogIn</a>
     <a *ngIf="this.cookies.GetSesionActual() == null" mat-button color="primary" routerLink="/LogUp" >LogUp</a>
 
@@ -21,13 +26,16 @@
 
 
          <a *ngIf="this.cookies.GetSesionActual().tipo == 'Recepcionista' " mat-button color="primary"  routerLink="/Sala" >Sala de Espera</a>
-        <a *ngIf="this.cookies.GetSesionActual().tipo == 'Especialista' " mat-button color="primary"  routerLink="/EspecialistaTurnos" >Turnos Espe</a>
+        <a *ngIf="this.cookies.GetSesionActual().tipo == 'Especialista' " mat-button color="primary"  routerLink="/EspecialistaTurnos" >Mis Turnos</a>
 
 
       <a *ngIf="this.cookies.GetSesionActual().tipo == 'admin'" mat-button color="primary"  routerLink="/TurnoCon" >Turnos Consulta</a>
       <a *ngIf="this.cookies.GetSesionActual().tipo == 'admin'" mat-button color="primary" routerLink="/AltaPaciente" >Altas</a>
 
+
+      <span> Hola {{this.cookies.GetSesionActual().nombre}}   <img style="width:60px; height: auto;" src={{this.cookies.GetSesionActual().imagen}}></span>
    </div>
+
 
 </mat-toolbar>
 
